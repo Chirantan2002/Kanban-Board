@@ -71,7 +71,7 @@ const PriorityList = () => {
     return (
       <div className="flex items-center gap-2">
         <div
-          className={`size-6 ${priorityItem.backgroundColor} rounded-md flex items-center justify-center text-lg ${priorityItem.textColor}`}
+          className={`w-auto ${priorityItem.backgroundColor} rounded-md flex items-center justify-center text-lg ${priorityItem.textColor}`}
         >
           <priorityItem.icon />
         </div>
@@ -87,7 +87,7 @@ const PriorityList = () => {
   }
 
   return (
-    <div className="">
+    <div className="w-full">
       <Label className="opacity-75 text-sm font-medium">Priority</Label>
       <div className="mt-2 w-full">
         <DropdownMenu>
@@ -103,7 +103,7 @@ const PriorityList = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="w-full min-w-[1200px] poppins"
+            className="w-full min-w-[200px] poppins"
           >
             {PriorityListArray.map((priorityItem, idx) => (
               <DropdownMenuItem

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -18,10 +18,14 @@ import ProjectList from "./sub-components/ProjectList";
 import PriorityList from "./sub-components/PriorityList";
 
 const TaskDialog = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenChange = (open: boolean) => setIsOpen(open);
+
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="rounded-3xl px-5">Add New Task</Button>
+        <Button className="rounded-3xl px-5 cursor-pointer">Add New Task</Button>
       </DialogTrigger>
       <DialogContent className="poppins max-w-3xl">
         <DialogHeader className="">
@@ -48,15 +52,19 @@ const TaskDialog = () => {
             <PriorityList />
           </div>
         </div>
-        // Footer area
         <div className="">
           <Separator className="mt-4 left-0 absolute" />
         </div>
-        <div className="flex gap-1 justify-end mt-6">
-          <Button type="button" variant="secondary">
+        <div className="flex items-center gap-1 justify-end mt-6">
+          <Button type="button" variant="outline" className="px-5 cursor-pointer"
+          onClick={() => {
+            // Close the dialog
+            handleOpenChange(false);
+          }}
+          >
             Close
           </Button>
-          <Button className="mt-5 px-5">Add New Task</Button>
+          <Button className="px-5 cursor-pointer">Add New Task</Button>
         </div>
       </DialogContent>
     </Dialog>
