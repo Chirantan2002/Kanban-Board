@@ -20,8 +20,7 @@ A modern and responsive Kanban board built with **React**, **Next.js**, and **Ty
 
 ## 🖼️ Preview
 
-![Kanban Board Preview](./preview.png)  
-*(Add your project screenshot or GIF here)*
+![Kanban Board Preview](./public/preview.png)
 
 ## 🔧 Getting Started
 
@@ -34,7 +33,7 @@ A modern and responsive Kanban board built with **React**, **Next.js**, and **Ty
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/kanban-board.git
+git clone https://github.com/Chirantan2002/Kanban-Board.git
 
 # Navigate to project folder
 cd kanban-board
